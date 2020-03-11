@@ -1,0 +1,48 @@
+package br.edu.fatecosasco.aula2;
+
+public class Principal {
+
+	public static void main(String [] args) {
+		double valor1 = 57;
+		double valor2 = 23;
+		
+		Calculadora calc = new Calculadora();
+		double r = calc.somar(valor1, valor2);
+		
+		System.out.println("O resultado é " + r);
+		
+		r = calc.subtrair(valor1, valor2);
+		System.out.println("O resultado foi " + r);
+		
+	}
+	
+}
+
+
+
+
+
+
+package br.edu.fatecosasco.aula2;
+
+public class Calculadora {
+
+	double somar(double x, double y) {
+		double resultado; 
+ 
+		resultado = x+y;
+		
+		return resultado;
+
+	}
+	double subtrair(double x, double y) {
+		double resultado; 
+
+		resultado = x-y;
+
+		return resultado;
+
+	}
+
+
+}
