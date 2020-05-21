@@ -1,0 +1,59 @@
+Principal
+package fatec.aula05.acessores;
+
+import java.util.Random;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Aluno aluno = new Aluno();
+		aluno.escreverNome("José Mario");
+		aluno.setRA(20202020525L);
+		
+		calculaMedia(aluno);
+	}
+	
+	public static void calculaMedia(Aluno a) {
+		int media = 0;
+		if (a.getRA() < 201900) {
+			media = new Random().nextInt(10);
+		} else {
+			media = new Random().nextInt(5);
+		}
+		
+		System.out.printf("Média do aluno %s foi %d!", a.consultaNome(), media);
+	}
+
+}
+
+    
+    Aluno
+    
+    package fatec.aula05.acessores;
+
+public class Aluno {
+	 private String nome;
+	 private Long ra;
+	
+	//Método que concede acesso de leitura
+	public String consultaNome() {
+		return nome;
+	}
+	
+	//Método que concede acesso de escrita
+	public void escreverNome(String nomefut) {
+		if (nome == null) {
+			nome = nomefut;
+		}
+	}
+	
+	//Método que concede acesso de leitura
+	public Long getRA() {
+		return ra;
+	}
+	
+	//Método que concede acesso de escrita
+	public void setRA(Long asdf) {
+		ra = asdf;
+	}
+}
